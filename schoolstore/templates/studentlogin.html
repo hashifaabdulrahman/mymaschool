@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<h1 class="text-center">Student registration</h1>
+<hr>
+<div class="container w-50 text-center my-5">
+   <form action="" method="POST" class="uniForm">
+       {% csrf_token %}
+         {{form.as_p}}
+         <button class="btn btn-primary" type="submit">Submit</button>
+   </form>
+    <a href="{% url 'login' %}" class="btn btn-primary" type="submit">Logout</a>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+<form action="" method="POST">
+  {% csrf_token %}
+  <div class="imgcontainer">
+    <img src="data:image/jpeg;base64,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" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="card-body">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    <a href="{% url 'register' %}" class="cancelbtn">REGISTER</a>
+  </div>
+</form>
+</div>
+
+{% endblock %}
